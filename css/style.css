@@ -1,0 +1,30 @@
+@import url("https://v1.fontapi.ir/css/Tanha");
+:root {
+  --font-family: "Tanha", sans-serif;
+  --body-font: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-family);
+}
+/*# sourceMappingURL=style.css.map */
