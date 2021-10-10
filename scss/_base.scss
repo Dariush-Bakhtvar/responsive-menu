@@ -28,30 +28,3 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-family);
 }
-
-// shair display
-%display {
-    @include flex(space-between, center, row-reverse);
-}
-
-
-/**  container initial style */
-
-.nav-container {
-    @include coordin(100%, 65px);
-    @extend %display;
-    background-color: map-get($map: $color, $key: Asphalt);
-}
-
-.toggle {
-    @include flex(center, center);
-    flex: 1 0 10%;
-    height: 100%;
-}
-
-.Menu {
-    @extend %display;
-    flex-grow: 2;
-    flex-basis: 90%;
-    text-align: right;
-}

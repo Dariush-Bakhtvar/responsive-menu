@@ -3,14 +3,34 @@
     --bg-hover: #2c3e50;
 }
 
+// shair display
+%display {
+    @include flex(space-between, center, row-reverse);
+}
+
+
+/**  container initial style */
+
+.nav-container {
+    @include coordin(100%, 65px);
+    @extend %display;
+    background-color: map-get($map: $color, $key: Asphalt);
+}
+
 
 /** toggle btn style  */
 
+.toggle {
+    @include flex(center, center);
+    flex: 1 0 10%;
+    height: 100%;
+}
+
 .btn-toggle {
-    display: flex;
+    display: none;
     flex-flow: row wrap;
     width: 35px;
-    height: 38%;
+    height: 40%;
     position: relative;
     cursor: pointer;
     // display: none;
@@ -23,6 +43,10 @@
 }
 
 .Menu {
+    @extend %display;
+    flex-grow: 2;
+    flex-basis: 90%;
+    text-align: right;
     .logo {
         display: none;
     }
@@ -47,13 +71,11 @@
     li {
         position: relative;
         flex-grow: 1;
-        &:hover ul {
-            display: block;
-            transition: 1s ease-in-out;
-        }
     }
     a {
         display: block;
+        /** use .arrow-down inside <a> tag width position relative and set position absolute for arrow **/
+        position: relative;
         color: map-get($map: $color, $key: Clouds);
         padding: 10px 0;
         transition: 0.7s ease-in-out;
@@ -63,7 +85,54 @@
         i {
             margin-left: 5px;
             vertical-align: middle;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
+    }
+}
+
+.arrow-down {
+    @include coordin(0, 0);
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid map-get($map: $color, $key: Clouds);
+}
+
+@media screen and (max-width: 768px) {
+    .toggle {
+        justify-content: flex-end;
+        padding-right: 10px;
+    }
+    .btn-toggle {
+        height: 42%;
+        display: flex;
+    }
+    .Menu {
+        .logo {
+            width: 100%;
+            height: 100px;
+            @include flex(center, center);
+            padding: 5px;
+            img {
+                border-radius: 50%;
+                // border: 5px solid rgb(23, 214, 228);
+                width: 35%;
+                height: 100%;
+                padding: 5px;
+                // box-shadow: 1px 1px 3px #000, -1px -1px 3px rgba(0, 0, 0, 0.966);
+            }
+        }
+        position: fixed;
+        right: 0;
+        top: 65px;
+        @include coordin(320px, 100%);
+        background-color: inherit;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        transition: right 0.8s ease-in-out;
+        overflow-y: auto;
     }
 }
