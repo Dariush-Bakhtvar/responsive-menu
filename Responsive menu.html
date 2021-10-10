@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nva class="nav-container">
+    <nav class="nav-container">
         <section class="toggle">
             <div class="btn-toggle">
                 <span></span>
@@ -22,13 +22,21 @@
         <ul class="Menu">
             <div class="logo"><img src="img/logo.png" alt="logo"></div>
             <li><a href="#">خانه <i class="fas fa-home"></i></a></li>
-            <li><a href="#">نرم افزار <i class="fab fa-windows"></i></a></li>
+            <li>
+                <a href="#" data-toggle-id="subMenu1">نرم افزار <i class="fab fa-windows"></i></a>
+                <ul id="subMenu1">
+                    <li><a href="#">کدنویسی<i class="far fa-code"></i></a></li>
+                    <li><a href="#"> طراحی<i class="far fa-palette"></i></a></li>
+                    <li><a href="#">بازی سازی<i class="fas fa-gamepad"></i></a></li>
+                    <li><a href="#">اداری<i class="far fa-chair-office"></i></a></li>
+                </ul>
+            </li>
             <li><a href="#">برنامه نویسی <i class="fas fa-laptop-code"></i></a></li>
             <li><a href="#"> ارتباط با ما<i class="fas fa-phone"></i></a></li>
             <li><a href="#">ورود<i class="fas fa-sign-in"></i> </a></li>
             <li><a href="#">ثبت نام<i class="fas fa-user-plus"></i></a></li>
         </ul>
-    </nva>
+    </nav>
     <script src="js/script.js"></script>
 </body>
 

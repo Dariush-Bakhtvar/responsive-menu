@@ -1,0 +1,12 @@
+$color: ( Asphalt: #2f3640, Clouds: #ecf0f1, MegaMan: #48dbfb, );
+@mixin flex($justify, $align, $dir: row) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin coordin($w, $h) {
+    width: $w;
+    height: $h;
+}

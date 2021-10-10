@@ -1,1 +1,69 @@
 @import "mixins";
+:root {
+    --bg-hover: #2c3e50;
+}
+
+
+/** toggle btn style  */
+
+.btn-toggle {
+    display: flex;
+    flex-flow: row wrap;
+    width: 35px;
+    height: 38%;
+    position: relative;
+    cursor: pointer;
+    // display: none;
+    span {
+        width: 100%;
+        height: 3px;
+        background-color: map-get($map: $color, $key: Clouds);
+        border-radius: 5px;
+    }
+}
+
+.Menu {
+    .logo {
+        display: none;
+    }
+    ul {
+        position: absolute;
+        background-color: map-get($map: $color, $key: Asphalt);
+        right: 0;
+        width: 95%;
+        display: none;
+        transition: 1s ease-in-out;
+        a {
+            padding-right: 5px;
+            &:hover {
+                background-color: var(--bg-hover);
+            }
+            i {
+                font-size: 1rem;
+                margin-left: 8px;
+            }
+        }
+    }
+    li {
+        position: relative;
+        flex-grow: 1;
+        &:hover ul {
+            display: block;
+            transition: 1s ease-in-out;
+        }
+    }
+    a {
+        display: block;
+        color: map-get($map: $color, $key: Clouds);
+        padding: 10px 0;
+        transition: 0.7s ease-in-out;
+        &:hover {
+            color: map-get($map: $color, $key: MegaMan);
+        }
+        i {
+            margin-left: 5px;
+            vertical-align: middle;
+            font-size: 1.2rem;
+        }
+    }
+}
