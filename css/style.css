@@ -121,7 +121,7 @@
   }
   .Menu {
     position: fixed;
-    right: 0;
+    right: -320px;
     top: 65px;
     width: 320px;
     height: 100%;
@@ -130,23 +130,49 @@
     align-items: flex-end;
     justify-content: flex-start;
     transition: right 0.8s ease-in-out;
+    padding-top: 20px;
     overflow-y: auto;
   }
-  .Menu .logo {
+  .Menu li {
     width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
+    margin: 10px 0;
+    flex-grow: 0;
   }
-  .Menu .logo img {
-    border-radius: 50%;
-    width: 35%;
-    height: 100%;
-    padding: 5px;
+  .Menu li a {
+    padding-right: 8px;
   }
+  .Menu li a:hover {
+    background-color: var(--bg-hover);
+    transition: 0.9s ease-in-out;
+  }
+  .arrow-down {
+    left: 10px;
+  }
+}
+
+.activeToggle span {
+  position: absolute;
+}
+
+.activeToggle span:nth-child(1) {
+  top: -4px;
+  transform-origin: left center;
+  transform: rotate(45deg);
+}
+
+.activeToggle span:nth-child(2) {
+  transform-origin: left center;
+  background: transparent;
+}
+
+.activeToggle span:nth-child(3) {
+  top: -18px;
+  transform-origin: left center;
+  transform: rotate(-45deg);
+}
+
+.activeMenu {
+  right: 0;
 }
 
 :root {
@@ -271,7 +297,7 @@
   }
   .Menu {
     position: fixed;
-    right: 0;
+    right: -320px;
     top: 65px;
     width: 320px;
     height: 100%;
@@ -280,23 +306,49 @@
     align-items: flex-end;
     justify-content: flex-start;
     transition: right 0.8s ease-in-out;
+    padding-top: 20px;
     overflow-y: auto;
   }
-  .Menu .logo {
+  .Menu li {
     width: 100%;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
+    margin: 10px 0;
+    flex-grow: 0;
   }
-  .Menu .logo img {
-    border-radius: 50%;
-    width: 35%;
-    height: 100%;
-    padding: 5px;
+  .Menu li a {
+    padding-right: 8px;
   }
+  .Menu li a:hover {
+    background-color: var(--bg-hover);
+    transition: 0.9s ease-in-out;
+  }
+  .arrow-down {
+    left: 10px;
+  }
+}
+
+.activeToggle span {
+  position: absolute;
+}
+
+.activeToggle span:nth-child(1) {
+  top: -4px;
+  transform-origin: left center;
+  transform: rotate(45deg);
+}
+
+.activeToggle span:nth-child(2) {
+  transform-origin: left center;
+  background: transparent;
+}
+
+.activeToggle span:nth-child(3) {
+  top: -18px;
+  transform-origin: left center;
+  transform: rotate(-45deg);
+}
+
+.activeMenu {
+  right: 0;
 }
 
 :root {
