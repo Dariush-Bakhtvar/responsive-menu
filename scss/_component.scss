@@ -44,6 +44,36 @@
     }
 }
 
+
+/**  active toggle class  in the small device*/
+
+.activeToggle {
+    span {
+        position: absolute;
+        transition: 0.9s ease-in-out;
+        &:nth-child(1) {
+            top: -4px;
+            transform-origin: left center;
+            transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+            transform-origin: left center;
+            // opacity: 0;
+            width: 0;
+            background-color: transparent;
+            transition: 0.3s ease-in-out;
+        }
+        &:nth-child(3) {
+            top: 20px;
+            transform-origin: left center;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+
+/** main menu */
+
 .Menu {
     @extend %display;
     flex-grow: 2;
@@ -91,6 +121,9 @@
     }
 }
 
+
+/** arrow beside dropdown menu */
+
 .arrow-down {
     @include coordin(0, 0);
     position: absolute;
@@ -99,6 +132,12 @@
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 7px solid map-get($map: $color, $key: Clouds);
+    transition: 0.4s ease-in-out;
+}
+
+.arrow-hover {
+    transform: rotate(180deg);
+    transition: 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -142,33 +181,6 @@
     }
     .arrow-down {
         left: 10px;
-    }
-}
-
-
-/**  active toggle class  in the small device*/
-
-.activeToggle {
-    span {
-        position: absolute;
-        transition: 0.9s ease-in-out;
-        &:nth-child(1) {
-            top: -4px;
-            transform-origin: left center;
-            transform: rotate(45deg);
-        }
-        &:nth-child(2) {
-            transform-origin: left center;
-            // opacity: 0;
-            width: 0;
-            background-color: transparent;
-            transition: 0.3s ease-in-out;
-        }
-        &:nth-child(3) {
-            top: 20px;
-            transform-origin: left center;
-            transform: rotate(-45deg);
-        }
     }
 }
 
